@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-weight: 300;
+    overflow-x: hidden;
+    background-image: url(..img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 2fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+header {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-size: 15px, 350px;
+    background-position: top, 0 100%;
+}
+
+
+h1 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: rgb(156, 0, 0);
+}
+
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    background-image: url(..img/pin.png), url(..img/pin.png), url(..img/myform.jpg);
+    background-repeat: no-repeat;
+    background-size: 15px, 15px, cover;
+    background-position: top left, bottom right;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    border-bottom: 3px solid blue;
+}
+
+form div:nth-child(5),form div:nth-child(6) {
+    border-bottom: none;
+}
+
+
+form div input,form div button {
+    width: 100%;
+    padding: 1px;
+    border: none;
+    font-size: 95%;
+    background-color: transparent;
+}
+
+form div input[type="text"] {
+    padding: 4px 0;
+}
+
+form div input[type="date"],form div input[type="time"] {
+    cursor: text;
+}
+
+form div input:focus,button:focus {
+    outline: none;
+}
+
+form div label {
+    padding: 3px 0;
+    align-self: center;
+    font-weight: 400;
+    color: rgb(26, 23, 23);
+}
+
+form div button {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.4s;
+}
+
+form div button:hover {
+    color: rgb(194, 177, 177);
+}
+
+.container-notes {
+    width: 100vw;
+}
+
+.box-note {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.note-style {
+    width: 180px;
+    height: 250px;
+    position: relative;
+    padding: 10px;
+    list-style-type: none;
+    background-image: url(..img/page.jpg);
+    opacity: 1;
+    animation-name: fadeInNote;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    background-size: cover;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .container-form {
+        padding: 5px;
+    }
+
+    form {
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+.container-delete-icon {
+    visibility: hidden;
+    opacity: 0;   
+}
+
+.container-delete-icon button {
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000000;
+}
+
+.fa-window-close{
+    font-size: 150%;
+    background-color: #FEFF99;
+}
+
+.note-style:hover .container-delete-icon {
+    visibility: visible;
+    opacity: 1;
+}
+
+.task-note {
+    height: 250px;
+    max-height: 170px;
+    margin-top:20px;
+    word-wrap: break-word;
+    padding-bottom: 5px;
+    transform: skewY(1deg);
+    overflow-y: auto;
+}
+

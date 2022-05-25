@@ -8,7 +8,7 @@ body{
     font-size: 20px;
     font-weight: 300;
     overflow-x: hidden;
-    background-image: url(..img/background.jpg);
+    background-image:url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -52,7 +52,7 @@ form {
     width: 500px;
     border-radius: 4px;
     box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.4);
-    background-image: url(..img/pin.png), url(..img/pin.png), url(..img/myform.jpg);
+    background-image: url(../img/pin.png), url(../img/pin.png), url(../img/myform.jpg);
     background-repeat: no-repeat;
     background-size: 15px, 15px, cover;
     background-position: top left, bottom right;
@@ -124,7 +124,7 @@ form div button:hover {
     position: relative;
     padding: 10px;
     list-style-type: none;
-    background-image: url(..img/page.jpg);
+    background-image: url(../img/page.jpg);
     opacity: 1;
     animation-name: fadeInNote;
     animation-iteration-count: 1;

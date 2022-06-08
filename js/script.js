@@ -122,6 +122,7 @@ document.querySelector("ul").addEventListener("click", (e)=> {
   if (e.target.classList.contains("delete")) {
        ul = document.querySelector("ul");
        li = e.path[3];
+      
       }
       let index = 0;
       // Remove item from dom
@@ -134,8 +135,4 @@ document.querySelector("ul").addEventListener("click", (e)=> {
         note[i].id = i;
       }
       localStorage.setItem('mynote', JSON.stringify(arr));
-
-      if (localStorage.mynote === "[]") {
-        localStorage.removeItem("mynote");
-      }
 });
